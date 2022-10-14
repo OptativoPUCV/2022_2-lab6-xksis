@@ -14,3 +14,19 @@ Fri 14 Oct 2022 11:43:46 PM UTC:
  tests:  7|1
 total_score: 55/70
 f43b7dc
+Fri 14 Oct 2022 11:50:18 PM UTC: 
+ sudoku.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:149:14: error: implicit declaration of function ‘createStak’; did you mean ‘createStack’? [-Werror=implicit-function-declaration]
+  149 |   Stack* S = createStak();
+      |              ^~~~~~~~~~
+      |              createStack
+sudoku.c:149:14: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+sudoku.c:151:21: error: comparison between pointer and integer [-Werror]
+  151 |   while(is_empty(S) != NULL)
+      |                     ^~
+cc1: all warnings being treated as errors
+Compilation failed
+fe96b79
